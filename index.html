@@ -15,18 +15,10 @@
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDq0AYhMIqmWaQRTiPJPOr7PKjI2VSNnS8",
-            authDomain: "eniscoding.firebaseapp.com",
-            databaseURL: "https://eniscoding.firebaseio.com",
-            storageBucket: "eniscoding.appspot.com",
-            messagingSenderId: "308390755860"
-        };
-        firebase.initializeApp(config);
-    </script>
+
     <script src="js/main.js"></script>
     <title>Dev Fest</title>
 </head>
@@ -55,18 +47,20 @@
             <div class="inner cover">
                 <h1 class="cover-heading">Please Login or create an account</h1>
                 <p class="lead">Your account will be used to track scores and provide you with the ability to share your results and impress your friends.</p>
-                <form class="form-signin">
+
                     <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus><br>
-                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <br>
+                    <label for="inputPassword" id="passwordInput" class="sr-only">Password</label>
                     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me
                         </label>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                </form>
+                    <button class="btn btn-lg btn-default btn-block" onclick="login()">Login</button>
+                    <button class="btn btn-lg btn-primary btn-block" onclick="signup()">Sign in</button>
+
             </div>
 
             <div class="mastfoot">
