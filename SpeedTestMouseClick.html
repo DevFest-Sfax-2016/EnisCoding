@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="SpeedTestMouseClick.css">
+</head>
+<body>
+<center>
+    <div id="title">
+        <p id="ptitle">Click Speed Test (CPS)</p>
+    </div>
+    <div id="test">
+        <br>
+        <br>
+        <br>
+    </div>
+    <div id="description">
+        <p id="dline">You will have 5 seconds to click on the button.
+            <br>The time will start as soon as you start clicking.
+            <br>It will tell you your average and score at the end.</p>
+    </div>
+    <div id="results">
+        <p id="resulttable">Results will appear here.</p>
+    </div>
+    <button id="button">CLICK! (5 secs)</button>
+</center>
+<div onclick="OpenInNewTab();">
+    <button id="fsbutton">Fullscreen Version</button>
+</div>
+<script type="text/javascript">
+    function OpenInNewTab() {
+        var url = "https://jsfiddle.net/Tomzen/hu720awa/32/embedded/result/"
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+</script>
+</body>
+</html>
