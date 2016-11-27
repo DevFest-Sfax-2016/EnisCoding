@@ -7,19 +7,27 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <link rel="icon" href="https://assets-cdn.github.com/favicon.png">
-
-
+    <link rel="icon" href="https://assets-cdn.github.com/favicon.ico">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
 
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDq0AYhMIqmWaQRTiPJPOr7PKjI2VSNnS8",
+            authDomain: "eniscoding.firebaseapp.com",
+            databaseURL: "https://eniscoding.firebaseio.com",
+            storageBucket: "eniscoding.appspot.com",
+            messagingSenderId: "308390755860"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/main.js"></script>
     <title>Dev Fest</title>
 </head>
 
@@ -72,6 +80,10 @@
     </div>
 
 </div>
+
+
+
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
